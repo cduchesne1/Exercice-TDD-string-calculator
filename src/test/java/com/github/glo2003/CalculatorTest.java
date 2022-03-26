@@ -55,4 +55,11 @@ public class CalculatorTest {
 
         assertEquals(3, result);
     }
+
+    @Test
+    void whenMultipleNumbers_thenReturnsSum() {
+        int result = calculator.add("1,2,3");
+
+        assertEquals(6, result);
+    }
 }
