@@ -62,4 +62,18 @@ public class CalculatorTest {
 
         assertEquals(6, result);
     }
+
+    @Test
+    void whenMultipleNumbersWithNewLine_thenReturnsSum() {
+        int result = calculator.add("1\n2,3");
+
+        assertEquals(6, result);
+    }
+
+    @Test
+    void whenTrailingNewLine_thenReturnsSum() {
+        int result = calculator.add("1,\n");
+
+        assertEquals(1, result);
+    }
 }
