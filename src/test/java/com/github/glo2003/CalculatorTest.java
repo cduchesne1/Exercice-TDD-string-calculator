@@ -41,4 +41,18 @@ public class CalculatorTest {
 
         assertEquals(3, result);
     }
+
+    @Test
+    void whenTrailingDelimiter_thenReturnsSum() {
+        int result = calculator.add("1,2,");
+
+        assertEquals(3, result);
+    }
+
+    @Test
+    void whenDuplicateDelimiter_thenReturnsSum() {
+        int result = calculator.add("1,,2");
+
+        assertEquals(3, result);
+    }
 }
