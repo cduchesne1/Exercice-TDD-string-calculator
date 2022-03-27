@@ -76,4 +76,11 @@ public class CalculatorTest {
 
         assertEquals(1, result);
     }
+
+    @Test
+    void whenDelimitersAndNumbersString_thenReturnsSum() {
+        int result = calculator.add("//;\n1;2");
+
+        assertEquals(3, result);
+    }
 }
